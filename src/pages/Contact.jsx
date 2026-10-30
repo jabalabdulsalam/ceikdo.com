@@ -1,5 +1,5 @@
 import { Container } from "../components/ui.jsx";
-import { profile } from "../data/portfolio.js";
+import { profile } from "../data/profile.js";
 
 const steps = [
   {
@@ -91,7 +91,7 @@ export default function Contact() {
           <a
             href={whatsappUrl}
             target='_blank'
-            rel='noreferrer'
+            rel='noopener noreferrer'
             className='inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90'
           >
             WhatsApp
@@ -158,7 +158,7 @@ export default function Contact() {
           <a
             href={whatsappUrl}
             target='_blank'
-            rel='noreferrer'
+            rel='noopener noreferrer'
             className='rounded-2xl border border-slate-200 p-6 transition hover:border-accent'
           >
             <span className='text-sm text-slate-500'>WhatsApp</span>
@@ -242,7 +242,7 @@ export default function Contact() {
         <a
           href={whatsappUrl}
           target='_blank'
-          rel='noreferrer'
+          rel='noopener noreferrer'
           className='mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100'
         >
           Discuss Your Project

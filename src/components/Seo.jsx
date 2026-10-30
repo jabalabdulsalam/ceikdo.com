@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { articles, profile } from "../data/portfolio.js";
+import { articles } from "../data/portfolio.js";
+import { profile } from "../data/profile.js";
 
 const siteUrl = "https://ceikdo.com";
 const defaultImage = `${siteUrl}${profile.photo}`;
@@ -110,6 +111,7 @@ export default function Seo() {
           description: "The requested page could not be found.",
         };
   const canonicalUrl = `${siteUrl}${pathname === "/" ? "/" : pathname.replace(/\/$/, "")}`;
+  const socialImage = article?.image ? `${siteUrl}${article.image}` : defaultImage;
 
   useEffect(() => {
     document.documentElement.lang = "en";
@@ -124,11 +126,11 @@ export default function Seo() {
     setMeta("property", "og:title", metadata.title);
     setMeta("property", "og:description", metadata.description);
     setMeta("property", "og:url", canonicalUrl);
-    setMeta("property", "og:image", defaultImage);
+    setMeta("property", "og:image", socialImage);
     setMeta("name", "twitter:card", "summary_large_image");
     setMeta("name", "twitter:title", metadata.title);
     setMeta("name", "twitter:description", metadata.description);
-    setMeta("name", "twitter:image", defaultImage);
+    setMeta("name", "twitter:image", socialImage);
     setLink("canonical", canonicalUrl);
 
     const graph = [
@@ -142,7 +144,7 @@ export default function Seo() {
         "@id": `${siteUrl}/#professional-service`,
         name: "Jabal Abdul Salam Web Development Services",
         url: `${siteUrl}/service`,
-        image: defaultImage,
+        image: socialImage,
         description: metadata.description,
         areaServed: ["Aceh", "Indonesia", "Worldwide"],
         provider: { "@id": `${siteUrl}/#person` },
@@ -184,7 +186,7 @@ export default function Seo() {
     });
 
     setStructuredData({ "@context": "https://schema.org", "@graph": graph });
-  }, [article, canonicalUrl, metadata.description, metadata.title, pathname]);
+  }, [article, canonicalUrl, metadata.description, metadata.title, pathname, socialImage]);
 
   return null;
 }

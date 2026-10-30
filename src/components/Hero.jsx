@@ -1,5 +1,5 @@
 import { Button, Container } from "./ui.jsx";
-import { profile } from "../data/portfolio.js";
+import { profile } from "../data/profile.js";
 import SocialLinks from "./SocialLinks.jsx";
 
 export default function Hero() {

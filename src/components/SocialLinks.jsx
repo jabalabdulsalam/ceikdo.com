@@ -1,5 +1,5 @@
 import { SocialIcon } from "./icons.jsx";
-import { profile } from "../data/portfolio.js";
+import { profile } from "../data/profile.js";
 
 export default function SocialLinks({ className = "" }) {
   return (
@@ -9,7 +9,7 @@ export default function SocialLinks({ className = "" }) {
           <a
             href={s.href}
             target='_blank'
-            rel='noreferrer'
+            rel='noopener noreferrer'
             aria-label={s.label}
             title={s.label}
             className='text-slate-500 transition hover:text-accent'
