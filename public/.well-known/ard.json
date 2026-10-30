@@ -1,0 +1,22 @@
+{
+  "@context": "https://agenticresourcediscovery.org/context/v1",
+  "entries": [
+    {
+      "identifier": "urn:air:ceikdo.com:portfolio",
+      "displayName": "Jabal Abdul Salam Portfolio",
+      "type": "text/html",
+      "url": "https://ceikdo.com/",
+      "description": "Professional portfolio and web development services for Jabal Abdul Salam, a full-stack web developer based in Aceh, Indonesia.",
+      "representativeQueries": [
+        "What web development services does Jabal Abdul Salam offer?",
+        "Which websites and web applications has Jabal Abdul Salam built?",
+        "How can I contact Jabal Abdul Salam for a web development project?"
+      ],
+      "capabilities": [
+        "web-development-services",
+        "portfolio",
+        "professional-background"
+      ]
+    }
+  ]
+}
