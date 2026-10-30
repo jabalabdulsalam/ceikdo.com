@@ -1,0 +1,25 @@
+# Jabal Abdul Salam
+
+> Personal portfolio of Jabal Abdul Salam, a full-stack web developer based in Aceh, Indonesia. The site covers professional web development services, completed projects, technical experience, and articles about web development and artificial intelligence.
+
+Use the links below to find the most relevant information. The pages are public and may be used to understand Jabal's professional background, services, and published work.
+
+## Overview
+
+- [Home](https://ceikdo.com/): Professional summary, technology stack, experience, and featured work.
+- [About](https://ceikdo.com/about): Background, education, work experience, and development focus.
+- [Services](https://ceikdo.com/service): Website and web application development services using WordPress, React, Laravel, and related technologies.
+- [Projects](https://ceikdo.com/projects): Portfolio of websites and web applications built for businesses and organizations.
+- [Contact](https://ceikdo.com/contact): Contact details and project inquiry information.
+
+## Articles
+
+- [Articles](https://ceikdo.com/articles): Published articles about web development, software engineering, artificial intelligence, and Edge AI.
+- [Choosing the Right PHP Framework for Information Systems](https://ceikdo.com/articles/choosing-the-right-php-framework-for-information-systems): Guidance for selecting a PHP framework for information-system projects.
+- [Lightweight CNNs for Efficient Edge AI Deployment](https://ceikdo.com/articles/lightweight-cnns-for-efficient-edge-ai-deployment): Overview of lightweight convolutional neural networks for Edge AI.
+- [How to Organize a React Project for Maintainability](https://ceikdo.com/articles/how-to-organize-a-react-project-for-maintainability): Practical guidance for structuring maintainable React projects.
+
+## Site resources
+
+- [Sitemap](https://ceikdo.com/sitemap.xml): Canonical list of public URLs.
+- [Robots policy](https://ceikdo.com/robots.txt): Automated crawler access policy.

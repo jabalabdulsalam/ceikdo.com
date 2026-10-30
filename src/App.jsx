@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PageTitle from "./components/PageTitle.jsx";
+import Seo from "./components/Seo.jsx";
 import Layout from "./components/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -13,7 +13,7 @@ import NotFound from "./pages/NotFound.jsx";
 export default function App() {
   return (
     <BrowserRouter>
-      <PageTitle />
+      <Seo />
 
       <Routes>
         <Route element={<Layout />}>

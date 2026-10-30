@@ -19,7 +19,7 @@ export default function ArticleDetail() {
       {/* Article Metadata */}
       <div className='mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-500'>
         <Tag>{article.category}</Tag>
-        <span>{article.date}</span>
+        <time dateTime={article.date}>{article.date}</time>
         <span>·</span>
         <span>{article.readTime}</span>
       </div>
@@ -31,7 +31,9 @@ export default function ArticleDetail() {
       <p className='mt-5 text-lg leading-relaxed text-slate-600'>{article.excerpt}</p>
 
       {/* Article Content */}
-      <article className='mt-10'>
+      <article className='mt-10' itemScope itemType='https://schema.org/Article'>
+        <meta itemProp='headline' content={article.title} />
+        <meta itemProp='description' content={article.excerpt} />
         {article.content.map((section, index) => (
           <section key={index} className='mb-8'>
             <h2 className='mb-3 text-xl font-bold text-slate-900'>{section.heading}</h2>
