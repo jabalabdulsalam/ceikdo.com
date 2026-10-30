@@ -1,18 +1,55 @@
-## Rencana Pengembangan
+# ceikdo.com
 
-- [ ] Sambungkan konten ke REST API
-- [ ] Dashboard admin untuk mengelola proyek dan artikel
-- [ ] Halaman detail proyek
-- [ ] Halaman sertifikat
-- [ ] Dukungan dua bahasa (Indonesia dan Inggris)
+🌀 Personal portfolio website built with React, React Router and Tailwind CSS 4.
 
-## Kontak
+## Introduction
 
-- Email: [jabalabdulsalam@gmail.com](mailto:jabalabdulsalam@gmail.com)
-- GitHub: [@jabalabdulsalam](https://github.com/jabalabdulsalam)
-- LinkedIn: [jabalabdulsalam](https://www.linkedin.com/in/jabalabdulsalam)
-- Instagram: [@ceikdo](https://www.instagram.com/ceikdo)
+This website was built from scratch using React 19, React Router 7 and Tailwind CSS 4, bundled with Vite, and was first initialized in October 2026. It showcases my projects, services, experience and articles. All of its content lives in a single data file, so it can easily be connected to a REST API later. It will undergo regular updates in the future.
 
----
+<!--
+## Performance
 
-© 2026 Jabal Abdul Salam
+**PageSpeed Insights : Desktop**
+Report URL: https://pagespeed.web.dev/analysis/...
+
+**PageSpeed Insights : Mobile**
+Report URL: https://pagespeed.web.dev/analysis/...
+-->
+
+## Getting Started
+
+If you are interested in running this project on your local machine, you can do so in just 3 easy steps below.
+
+### 1. Clone this template using one of the three ways:
+
+1. Clone using git
+
+```
+git clone https://github.com/jabalabdulsalam/ceikdo.com
+```
+
+2. Using `degit`
+
+```
+npx degit jabalabdulsalam/ceikdo.com YOUR_APP_NAME
+```
+
+3. Deploy to Vercel, Netlify, Cloudflare Pages, etc. Since the project uses `BrowserRouter`, make sure all routes are rewritten to `index.html`.
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+### 3. Run the development server
+
+```
+npm run dev
+```
+
+Open http://localhost:5173 with your browser to see the result. You can start customizing the website by editing `src/data/portfolio.js` and replacing the images in `public/images`.
+
+## License
+
+Licensed under the [MIT license](LICENSE).
