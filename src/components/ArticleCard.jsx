@@ -14,7 +14,9 @@ export default function ArticleCard({ article }) {
       <h3 className='text-lg font-bold'>{article.title}</h3>
       <p className='mt-2 text-slate-600'>{article.excerpt}</p>
       <div className='mt-auto flex items-center justify-between pt-5 text-sm'>
-        <time className='text-slate-400'>{article.date}</time>
+        <time className='text-slate-400' dateTime={article.date}>
+          {article.date}
+        </time>
         <span className='font-semibold text-accent'>Read</span>
       </div>
     </Link>

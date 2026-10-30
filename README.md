@@ -6,6 +6,10 @@
 
 This website was built from scratch using React 19, React Router 7 and Tailwind CSS 4, bundled with Vite, and was first initialized in October 2026. It showcases my projects, services, experience and articles. All of its content lives in a single data file, so it can easily be connected to a REST API later. It will undergo regular updates in the future.
 
+## SEO and GEO
+
+The site includes route-specific English metadata, canonical URLs, Open Graph and Twitter cards, JSON-LD structured data for the person, service, articles and breadcrumbs, plus `robots.txt` and `sitemap.xml` in the public directory. After deployment, submit `https://ceikdo.com/sitemap.xml` to Google Search Console and Bing Webmaster Tools.
+
 <!--
 ## Performance
 

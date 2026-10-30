@@ -24,6 +24,9 @@ export default function Hero() {
         <img
           src={profile.photo}
           alt={`Foto ${profile.name}`}
+          width='640'
+          height='800'
+          fetchPriority='high'
           className='mx-auto aspect-[4/5] w-full max-w-sm rounded-3xl bg-accent-soft object-cover md:ml-auto'
         />
       </Container>
