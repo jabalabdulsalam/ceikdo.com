@@ -2,7 +2,7 @@ import { Container, PageHeader } from "../components/ui.jsx";
 import Stack from "../components/Stack.jsx";
 import Experience from "../components/Experience.jsx";
 import Cta from "../components/Cta.jsx";
-import { profile } from "../data/portfolio.js";
+import { profile } from "../data/profile.js";
 
 export default function About() {
   return (

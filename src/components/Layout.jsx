@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Container } from "./ui.jsx";
-import { profile } from "../data/portfolio.js";
+import { profile } from "../data/profile.js";
 import SocialLinks from "./SocialLinks.jsx";
 
 const nav = [
@@ -18,14 +18,33 @@ const linkClass = ({ isActive }) =>
 function Header() {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    const handlePointerDown = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) setOpen(false);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("pointerdown", handlePointerDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("pointerdown", handlePointerDown);
+    };
+  }, [open]);
+
   return (
-    <header className='sticky top-0 z-50 border-b border-slate-200 bg-white/85 backdrop-blur'>
+    <header ref={menuRef} className='sticky top-0 z-50 border-b border-slate-200 bg-white/85 backdrop-blur'>
       <Container className='flex h-16 items-center justify-between gap-4'>
         {/* Logo / Nama */}
         <Link to='/' className='flex min-w-0 items-center gap-2.5 font-bold'>
@@ -186,11 +205,20 @@ function Footer() {
 }
 
 export default function Layout() {
+  const { pathname } = useLocation();
+
   return (
     <div className='flex min-h-svh flex-col'>
-      <Header />
+      <Header key={pathname} />
 
-      <main className='flex-1'>
+      <a
+        href='#main-content'
+        className='sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-accent'
+      >
+        Skip to content
+      </a>
+
+      <main id='main-content' className='flex-1'>
         <Outlet />
       </main>
 

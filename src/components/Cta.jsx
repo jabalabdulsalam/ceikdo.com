@@ -1,5 +1,6 @@
 import { Button, Section } from "./ui.jsx";
-import { cta, profile } from "../data/portfolio.js";
+import { cta } from "../data/cta.js";
+import { profile } from "../data/profile.js";
 
 export default function Cta() {
   return (
